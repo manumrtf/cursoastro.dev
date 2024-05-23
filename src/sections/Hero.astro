@@ -1,0 +1,51 @@
+---
+import Ninja from "../assets/ninja.astro";
+import Fire from "../assets/fire.astro";
+import Arrow from "@/assets/arrow.astro";
+import PurchaseCTA from "@/components/PurchaseCTA.astro";
+---
+
+<section
+    class="flex flex-col items-center gap-5 px-8 pt-12 lg:pb-4 text-center font-[Rubik] text-white"
+>
+    <h1
+        class="text-4xl
+md:text-5xl
+max-w-content-size
+xl:text-6xl
+text-center
+text-balance
+font-bold
+-tracking-[0.4px]
+group"
+    >
+        Dominar
+        <span class="relative">
+            <Ninja />
+            Astro
+        </span>
+        es dominar la
+        <span
+            class="bg-white text-black saturate-0 group-hover:saturate-100 mt-1 inline-block px-1"
+        >
+            web del futuro
+        </span>
+    </h1>
+    <p class="text-zinc-300 max-w-lg lg:max-w-xl mx-auto sm:text-lg/relaxed">
+        Conviértete en un ninja de la web moderna con Astro. Crea sitios súper
+        rápidos, dinámicos y modernos. Aprende desde cero hasta crear proyectos
+        complejos con facilidad.
+    </p>
+
+    <div class="relative">
+        <PurchaseCTA />
+        <div class="absolute top-3 -right-52 hidden md:block">
+            <p class="rotate-12 translate-y-4">Disponible el 23/06/2024</p>
+            <Arrow class="w-8 transform rotate-45" />
+        </div>
+        <span class="mt-6 flex items-center gap-2 animate-pulse text-red-600">
+            <Fire />
+            80% de descuento durante la reserva</span
+        >
+    </div>
+</section>

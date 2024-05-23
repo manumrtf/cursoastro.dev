@@ -1,0 +1,110 @@
+---
+import Avatar1 from "@/assets/avatars/user-1.webp";
+import Avatar2 from "@/assets/avatars/user-2.webp";
+import Avatar3 from "@/assets/avatars/user-3.webp";
+import Avatar4 from "@/assets/avatars/user-4.webp";
+import Avatar5 from "@/assets/avatars/user-5.webp";
+import Avatar6 from "@/assets/avatars/user-6.webp";
+import Avatar7 from "@/assets/avatars/user-7.webp";
+import Avatar8 from "@/assets/avatars/user-8.webp";
+import Avatar9 from "@/assets/avatars/user-9.webp";
+import Avatar10 from "@/assets/avatars/user-10.webp";
+import Avatar11 from "@/assets/avatars/user-11.webp";
+import Review from "@/components/Review.astro";
+
+const reviews = [
+    {
+        avatar: Avatar1,
+        user: "@qyxel",
+        content: "Excelente contenido de Astro, gracias por estos cursos!",
+    },
+    {
+        avatar: Avatar2,
+        user: "@nocturno7887",
+        content:
+            "Te agradezco muchísimo hermano. Astro es definitivamente el nuevo camino",
+    },
+
+    {
+        avatar: Avatar3,
+        user: "@gomusic8695",
+        content:
+            "Todo bestial. Muchísimas gracias por compartir tus conocimientos",
+    },
+    {
+        avatar: Avatar4,
+        user: "@SonGoku-pc7jl",
+        content:
+            "Ole manu, me sorprendió la calidad del curso, cada vez va mejorando",
+    },
+    {
+        avatar: Avatar5,
+        user: "@EmodiDev",
+        content:
+            "Genial amigo, eres de los pocos que ha profundizado en este framework",
+    },
+    {
+        avatar: Avatar6,
+        user: "@rodomx",
+        content:
+            "Muy bueno amigo! De los pocos que hace contenido de astro y tan genial que es!",
+    },
+    {
+        avatar: Avatar7,
+        user: "@mesut96",
+        content: "Muy buena forma de enseñar, estoy aprendiendo muchísimo! 🫶",
+    },
+    {
+        avatar: Avatar8,
+        user: "@AntonioLozano7",
+        content: "Genial los videos y genial explicado",
+    },
+    {
+        avatar: Avatar9,
+        user: "@Sikriet",
+        content: "Primer vídeo que veo tuyo y la verdad que explicas muy bien",
+    },
+    {
+        avatar: Avatar10,
+        user: "@vimintro",
+        content: "Gracias por el contenido de primera!",
+    },
+    {
+        avatar: Avatar11,
+        user: "@camilaclaps(novia)",
+        content: "Buen trabajo mi amor 👏",
+    },
+];
+---
+
+<section
+    class="px-8 group flex flex-col items-center max-w-content-size mx-auto overflow-hidden [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]"
+>
+    <div class="relative flex overflow-x-hidden">
+        <p class="sr-only">Valoraciones</p>
+        <div
+            class="py-12 animate-slide-left whitespace-nowrap flex group-hover:[animation-play-state:paused]"
+        >
+            {
+                reviews.map((review) => (
+                    <Review src={review.avatar} user={review.user}>
+                        {review.content}
+                    </Review>
+                ))
+            }
+        </div>
+
+        <div
+            class="absolute top-0 py-12 animate-slide-right whitespace-nowrap flex group-hover:[animation-play-state:paused]"
+            aria-hidden="true"
+        >
+            {
+                reviews.map((review) => (
+                    <Review src={review.avatar} user={review.user}>
+                        {review.content}
+                    </Review>
+                ))
+            }
+        </div>
+    </div>
+</section>
