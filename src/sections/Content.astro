@@ -1,0 +1,79 @@
+---
+import Heading2 from "@/components/Heading2.astro";
+import ContentCard from "@/components/ContentCard.astro";
+const content = [
+    {
+        title: "¿Por qué Astro?",
+        description:
+            "Descubre las ventajas de Astro y por qué es una excelente opción para tus proyectos.",
+    },
+    {
+        title: "Configurar el entorno de desarrollo",
+        description:
+            "Aprende a configurar tu entorno de desarrollo para trabajar con Astro.",
+    },
+    {
+        title: "Estructura de Astro",
+        description:
+            "Familizarizate con la estructura de Astro y entiende como se interconecta cada una de sus partes.",
+    },
+    {
+        title: "Páginas",
+        description:
+            "Aprende a crear distintas páginas en Astro y cómo navegar entre ellas.",
+    },
+    {
+        title: "Componentes",
+        description:
+            "Aprende las ventajas de trabajar con componentes y cómo sacarles el máximo provecho en Astro.",
+    },
+    {
+        title: "Layouts",
+        description:
+            "Descubre cómo trabajar con layouts en Astro y cómo te pueden ayudar a reutilizar código.",
+    },
+    {
+        title: "Estilos",
+        description:
+            "Aprende a trabajar con estilos en Astro y cómo puedes aplicarlos a tus componentes.",
+    },
+    {
+        title: "Scripts",
+        description:
+            "Aprende las distintas formas de dar interactividad a tus componentes en Astro.",
+    },
+];
+---
+
+<section
+    class="max-w-content-size mx-auto flex flex-col gap-12 mt-20 px-8 pb-12"
+>
+    <Heading2> Lo que aprenderás:</Heading2>
+    <div
+        cards-container
+        class="flex flex-col overflow-hidden gap-6 max-h-[992px] [mask-image:_linear-gradient(to_top,_transparent_0,_white_128px,white_calc(100%-0px),_transparent_100%)]"
+    >
+        {
+            content.map((item, index) => (
+                <ContentCard
+                    title={`${index + 1}. ${item.title}`}
+                    description={item.description}
+                />
+            ))
+        }
+    </div>
+    <button load-more class="text-white">Ver más</button>
+</section>
+
+<script>
+    document.querySelector("[load-more]")?.addEventListener("click", (e) => {
+        const target = e.target as HTMLButtonElement;
+        target && target.parentElement?.removeChild(target);
+        document
+            .querySelector("[cards-container]")
+            ?.classList.remove(
+                "max-h-[992px]",
+                "[mask-image:_linear-gradient(to_top,_transparent_0,_white_128px,white_calc(100%-0px),_transparent_100%)]",
+            );
+    });
+</script>

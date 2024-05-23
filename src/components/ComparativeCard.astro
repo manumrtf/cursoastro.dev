@@ -1,0 +1,22 @@
+---
+interface Props {
+    title: string;
+    type: "bad" | "good";
+    items: string[];
+}
+
+const { type, items, title } = Astro.props;
+---
+
+<div
+    class={`${type === "bad" ? "bg-dark-red" : "bg-dark-green"} p-6 rounded max-w-[351px]`}
+>
+    <p
+        class={`${type === "bad" ? "text-rose-500" : "text-green-500"} font-semibold text-pretty text-left text-xl`}
+    >
+        {title}
+    </p>
+    <ul class={` mt-4 space-y-3 list-disc px-6 text-lg`}>
+        {items.map((item) => <li>{item}</li>)}
+    </ul>
+</div>

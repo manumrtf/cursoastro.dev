@@ -4,10 +4,12 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'dark-blue': '#18181B'
+				'dark-blue': '#18181B',
+				'dark-red': "#2B2326",
+				"dark-green": "#26322D"
 			},
 			maxWidth: {
-				'content-size': '778px'
+				'content-size': '788px'
 			},
 			keyframes: {
 				'slide-left': {
@@ -20,8 +22,8 @@ export default {
 				},
 			},
 			animation: {
-				'slide-left': 'slide-left 20s linear infinite',
-				'slide-right': 'slide-right 20s linear infinite',
+				'slide-left': 'slide-left 25s linear infinite',
+				'slide-right': 'slide-right 25s linear infinite',
 			}
 		},
 	},

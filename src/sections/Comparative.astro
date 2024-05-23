@@ -1,0 +1,32 @@
+---
+import ComparativeCard from "@/components/ComparativeCard.astro";
+import Heading2 from "@/components/Heading2.astro";
+---
+
+<section
+    class="max-w-content-size mx-auto text-white pt-28 flex flex-col gap-12"
+>
+    <Heading2> Aprender es fácil, si se enseña fácil. </Heading2>
+    <div class="mt-6 px-8 gap-12 flex flex-col md:flex-row items-center">
+        <ComparativeCard
+            type="bad"
+            title="😓 Aprender en otros lugaress"
+            items={[
+                "Dificil encontrar contenidos bien explicado",
+                "Contenido desactualiza y/o ya no funcion",
+                "No puedes resolver tus dudas o problema",
+                "No sabes en qué orden aprender",
+            ]}
+        />
+        <ComparativeCard
+            type="good"
+            title="🤩 Aprender en cursoastro.dev"
+            items={[
+                "Contenido bien explicado y organizado",
+                "Constantemento actualizado y funcionando",
+                "Resuelvo tus dudas y problemas",
+                "Aprende de forma estructurada y eficiente",
+            ]}
+        />
+    </div>
+</section>
