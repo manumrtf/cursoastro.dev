@@ -22,8 +22,8 @@ export default {
 				},
 			},
 			animation: {
-				'slide-left': 'slide-left 25s linear infinite',
-				'slide-right': 'slide-right 25s linear infinite',
+				'slide-left': 'slide-left 30s linear infinite',
+				'slide-right': 'slide-right 30s linear infinite',
 			}
 		},
 	},
