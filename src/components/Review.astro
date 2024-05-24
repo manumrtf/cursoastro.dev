@@ -7,7 +7,7 @@ import { Image } from "astro:assets";
         width={48}
         height={48}
         src={Astro.props.src}
-        alt="User 1"
+        alt={`Foto de ${Astro.props.user}`}
         class="w-12 h-12 rounded-full saturate-0"
         loading={"eager"}
     />
