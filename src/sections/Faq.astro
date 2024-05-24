@@ -1,0 +1,51 @@
+---
+import Heading2 from "@/components/Heading2.astro";
+import ArrowDown from "@/assets/arrow-down.astro";
+import FaqItem from "@/components/FaqItem.astro";
+const faqs = [
+    {
+        question: "Este curso se mantendrá actualizado?",
+        answer: "Sí, este curso se mantendrá actualizado con las novedades de Astro.",
+    },
+    {
+        question: "El curso es de pago?",
+        answer: `
+        Para poder dedicarle el tiempo y esfuerzo necesario para mantener el curso actualizado y de calidad,
+        el curso será de pago. Pero no te preocupes, el precio será muy accesible.
+        `,
+    },
+    {
+        question: "Tendré acceso a las actualizaciones?",
+        answer: `Si compras el curso, tendrás acceso a todas las actualizaciones que se hagan en el futuro.`,
+    },
+    {
+        question: "El curso es solo para principiantes?",
+        answer: `No, el curso está diseñado para personas de todos los niveles, desde principiantes hasta avanzados.`,
+    },
+];
+---
+
+<section
+    class="max-w-content-size mx-auto text-zinc-200 px-8 flex flex-col items-center pt-28 pb-12"
+>
+    <Heading2>Preguntas Frecuentes</Heading2>
+    <div faqs-container class="flex flex-col gap-4 mt-8">
+        {
+            faqs.map(({ question, answer }) => (
+                <FaqItem question={question} answer={answer} />
+            ))
+        }
+    </div>
+</section>
+
+<script>
+    // FAQ Accordion
+    document
+        .querySelectorAll("[faqs-container] [faq-answer]")
+        .forEach((faq) => {
+            faq.previousElementSibling?.addEventListener("click", () => {
+                faq.classList.toggle("max-h-[0px]");
+                faq.classList.toggle("pb-6");
+            });
+        });
+</script>

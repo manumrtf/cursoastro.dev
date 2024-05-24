@@ -6,5 +6,24 @@ import BaseHead from "@/components/BaseHead.astro";
     <BaseHead title={Astro.props.title} />
     <body class="bg-dark-blue">
         <slot />
+        <footer class="pt-24 pb-6">
+            <div class="container mx-auto text-center text-white space-y-2">
+                <p class="text-sm">
+                    Creado con ❤️ por <a
+                        href="https://www.youtube.com/channel/UCmUmHK75blYXInJMzRgAQsA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="font-bold underline">manumrtf</a
+                    >
+                </p>
+                <p class="text-sm">
+                    <script is:inline>
+                        const year = new Date().getFullYear();
+                        document.write(year);
+                    </script>
+                    © Todos los derechos reservados
+                </p>
+            </div>
+        </footer>
     </body>
 </html>
