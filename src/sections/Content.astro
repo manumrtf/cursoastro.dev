@@ -2,192 +2,81 @@
 import Heading2 from "@/components/Heading2.astro";
 import ContentCard from "@/components/ContentCard.astro";
 const content = [
-    {
-        title: "¿Por qué Astro?",
-        description:
-            "Descubre las ventajas de Astro y por qué es una excelente opción para tus proyectos.",
-    },
-    {
-        title: "Configurar el entorno de desarrollo",
-        description:
-            "Aprende a configurar tu entorno de desarrollo para trabajar con Astro.",
-    },
-    {
-        title: "Estructura de Astro",
-        description:
-            "Familizarizate con la estructura de Astro y entiende como se interconecta cada una de sus partes.",
-    },
-    {
-        title: "Páginas",
-        description:
-            "Aprende a crear distintas páginas en Astro y cómo navegar entre ellas.",
-    },
-    {
-        title: "Componentes",
-        description:
-            "Aprende las ventajas de trabajar con componentes y cómo sacarles el máximo provecho en Astro.",
-    },
-    {
-        title: "Layouts",
-        description:
-            "Descubre cómo trabajar con layouts en Astro y cómo te pueden ayudar a reutilizar código.",
-    },
-    {
-        title: "Estilos",
-        description:
-            "Aprende a trabajar con estilos en Astro y cómo puedes aplicarlos a tus componentes.",
-    },
-    {
-        title: "Optimización de imágenes",
-        description:
-            "Aprende a optimizar las imágenes de tu proyecto en Astro para mejorar la velocidad de carga.",
-    },
-    {
-        title: "Fuentes externas",
-        description:
-            "Aprende a importar fuentes externas a tu proyecto en Astro.",
-    },
-    {
-        title: "Iconos",
-        description:
-            "Utiliza cualquier librería de iconos en tu proyecto en Astro.",
-    },
-
-    {
-        title: "Scripts",
-        description:
-            "Aprende las distintas formas de dar interactividad a tus componentes en Astro.",
-    },
-    {
-        title: "Islas",
-        description:
-            "Aprende a trabajar con islas en Astro para crear componentes de cualquier framework.",
-    },
-    {
-        title: "Transiciones de vistas",
-        description:
-            "Aprende a crear transiciones animadas de vistas en Astro.",
-    },
-    {
-        title: "Daisy UI",
-        description:
-            "Aprende a utilizar DaisyUI en Astro para crear interfaces de usuario de forma rápida y sencilla.",
-    },
-    {
-        title: "Modos de renderizado",
-        description:
-            "Descubre los distintos modos de renderizado en Astro y cúal elegir en cada caso.",
-    },
-    {
-        title: "Content Collections",
-        description:
-            "Descubre las ventajas de trabajar con Content Collections en Astro y cómo puedes sacarles el máximo provecho.",
-    },
-    {
-        title: "Internacionalización",
-        description:
-            "Aprende a internacionalizar tu proyecto en Astro y cómo mostrar contenido en distintos idiomas.",
-    },
-    {
-        title: "Crear un blog",
-        description:
-            "Crea un blog en Astro optimizado para SEO y con una excelente experiencia de usuario.",
-    },
-    {
-        title: "Fetch de datos",
-        description:
-            "Aprende a realizar peticiones a una API externa y mostrar los datos en tu proyecto en Astro.",
-    },
-    {
-        title: "Endpoints",
-        description:
-            "Aprende a crear funciones API en Astro y cómo consumirlas en tus componentes.",
-    },
-    {
-        title: "Astro DB",
-        description:
-            "Aprende a trabajar con Astro DB y cómo almacenar datos en tu proyecto.",
-    },
-    {
-        title: "CRUD con Astro DB",
-        description:
-            "Aprende a realizar operaciones CRUD con Astro DB en tu proyecto.",
-    },
-    {
-        title: "Autenticación",
-        description:
-            "Aprende a implementar un sistema de autenticación en tu proyecto en Astro.",
-    },
-    {
-        title: "Autenticación OAuth",
-        description:
-            "Aprende a implementar un sistema de autenticación con proveedores como Google o Github.",
-    },
-    {
-        title: "Middleware",
-        description:
-            "Evita duplicar código de servidor usando middlewares en Astro.",
-    },
-    {
-        title: "Emails",
-        description: "Aprende a enviar emails desde tu proyecto en Astro.",
-    },
-    {
-        title: "Wordpress Headless",
-        description:
-            "Aprende a conectar tu proyecto en Astro con Wordpress como CMS",
-    },
-    {
-        title: "Testing",
-        description:
-            "Aprende a utilizar herramientas de testing en Astro y sus beneficios.",
-    },
-    {
-        title: "Deploy",
-        description:
-            "Descubre las distintas formas de subir tu proyecto a internet y cómo hacerlo de forma segura y sin errores.",
-    },
-    {
-        title: "E-commerce",
-        description:
-            "Aprende a crear una tienda en línea en Astro y cómo gestionar los productos y pedidos.",
-    },
+  {
+    title: "I18n",
+    description: "Múltiples idiomas en tu aplicación.",
+  },
+  {
+    title: "Base de datos",
+    description: "Interactúa con una base de datos usando Prisma.",
+  },
+  {
+    title: "Auth",
+    description:
+      "Autenticación de usuarios, rutas protegidas y roles (admin y usuario).",
+  },
+  {
+    title: "Pagos",
+    description: "Compra de suscripciones mensuales con distintos planes.",
+  },
+  {
+    title: "Webhooks",
+    description:
+      "Escucha cada suscripción y ejecuta la lógica de negocio necesaria.",
+  },
+  {
+    title: "Mails",
+    description:
+      "Envía emails como verificación de usuario o bienvenida tras comprar una suscripción.",
+  },
+  {
+    title: "PDF",
+    description: "Genera PDFs para facturas y envíalos por correo.",
+  },
+  {
+    title: "QR Acceso",
+    description: "Crea un QR seguro de acceso a un local",
+  },
+  {
+    title: "Websockets",
+    description: "Escucha y muestra eventos de acceso en tiempo real.",
+  },
 ];
 ---
 
 <section
-    class="max-w-content-size mx-auto flex flex-col gap-12 mt-20 px-8 pt-28"
+  class="max-w-content-size mx-auto flex flex-col gap-12 mt-20 px-8 pt-28"
 >
-    <Heading2> Lo que aprenderás:</Heading2>
-    <div
-        cards-container
-        class="flex flex-col overflow-hidden gap-6 max-h-[992px] [mask-image:_linear-gradient(to_top,_transparent_0,_white_128px,white_calc(100%-0px),_transparent_100%)]"
-    >
-        {
-            content.map((item, index) => (
-                <ContentCard
-                    title={`${index + 1}. ${item.title}`}
-                    description={item.description}
-                />
-            ))
-        }
-    </div>
-    <button
-        load-more
-        class="text-black text-lg font-semibold bg-white inline-block mx-auto rounded-lg py-3 px-6"
-        >Ver contenido completo 👈</button
-    >
+  <Heading2> Lo que aprenderás:</Heading2>
+  <div
+    cards-container
+    class="flex flex-col overflow-hidden gap-6 max-h-[992px] [mask-image:_linear-gradient(to_top,_transparent_0,_white_128px,white_calc(100%-0px),_transparent_100%)]"
+  >
+    {
+      content.map((item, index) => (
+        <ContentCard
+          title={`${index + 1}. ${item.title}`}
+          description={item.description}
+        />
+      ))
+    }
+  </div>
+  <button
+    load-more
+    class="text-black text-lg font-semibold bg-white inline-block mx-auto rounded-lg py-3 px-6"
+    >Ver contenido completo 👈</button
+  >
 </section>
 
 <script>
-    document.querySelector("[load-more]")?.addEventListener("click", (e) => {
-        const target = e.target as HTMLButtonElement;
-        target && target.parentElement?.removeChild(target);
-        document
-            .querySelector("[cards-container]")
-            ?.classList.remove(
-                "max-h-[992px]",
-                "[mask-image:_linear-gradient(to_top,_transparent_0,_white_128px,white_calc(100%-0px),_transparent_100%)]",
-            );
-    });
+  document.querySelector("[load-more]")?.addEventListener("click", (e) => {
+    const target = e.target as HTMLButtonElement;
+    target && target.parentElement?.removeChild(target);
+    document
+      .querySelector("[cards-container]")
+      ?.classList.remove(
+        "max-h-[992px]",
+        "[mask-image:_linear-gradient(to_top,_transparent_0,_white_128px,white_calc(100%-0px),_transparent_100%)]"
+      );
+  });
 </script>
